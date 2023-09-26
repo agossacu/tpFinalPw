@@ -12,22 +12,21 @@ export function Characters() {
 
   return (
     <div>
-      hola
-      <div id="fondoCharacter">
-        <ul className="container">
-          {characters.map((item, index) => (
-            <li key={index}>
-              <img src={item.image} />
+      <ul className="lista">
+        {characters.map((item, index) => (
+          <li className="fondoCharacter colorGris" key={index}>
+            <img src={item.image} />
+            <div>
               <h3 className="colorBlanco"> {item.name} </h3>
-              <h4>{item.status}</h4>
+              <h4 className="colorBlanco">{item.status}</h4>
               <p>Last known location:</p>
-              <h4></h4>
+              <h4 className="colorBlanco hover">{item.location.name}</h4>
               <p>First seen in:</p>
-              <h4></h4>
-            </li>
-          ))}
-        </ul>
-      </div>
+              <h4 className="colorBlanco hover">{item.location.name}</h4>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
