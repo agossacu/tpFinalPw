@@ -5,11 +5,11 @@
   color: orange;
 }
 .lista {
-  background-color: #1f1f1f;
+  background-color: rgb(39, 43, 51);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, auto));
   grid-auto-rows: auto;
-  gap: 10px;
+  gap: 30px;
   font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
     "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
@@ -17,7 +17,7 @@
 }
 .fondoCharacter {
   margin-top: 0px;
-  background-color: #4e4f4f;
+  background-color: #272b33;
   align-items: center;
   list-style-image: initial;
   border-radius: 3%;
@@ -25,6 +25,7 @@
   flex-direction: row;
   gap: 10px;
 }
+
 .fondoTexto {
   width: auto;
   height: 94%;
@@ -36,30 +37,34 @@ img {
   border-top-left-radius: 3%;
   width: 100%;
   object-fit: cover;
-  max-width: 250px;
+  max-width: 220px;
 }
 .elemento {
   border: 2px solid red;
 }
 .colorGris {
-  background-color: #606060;
+  background-color: rgb(60, 62, 68);
 }
 .header {
   text-align: end;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  gap: 60px;
+  justify-content: end;
+  gap: 30px;
   margin-right: 100px;
   list-style: none;
   font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
     "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
+  font-weight: 800;
+  margin: 0px;
+  padding: 8px;
 }
+
 .gris {
   color: #bababa;
 }
-h3 {
+h2 {
   padding: 1px;
   margin: 1px;
   color: red;
@@ -72,4 +77,47 @@ h1 {
   font-weight: 800;
   text-align: center;
   padding: 25px;
+  position: relative;
+}
+h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.support {
+  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 800;
+  color: #000000;
+  background-color: #ffffff;
+  border-color: orange;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: none;
+  border: 1px solid orange;
+}
+.separar {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.hover-fondo:hover {
+  background-color: orange;
+  color: #ffffff;
+}
+.absol {
+  position: absolute;
+  top: 50px; /* Posición a 50 píxeles desde la parte superior del ancestro posicionado */
+  left: 10px; /* Posición a 20 píxeles desde la izquierda del ancestro posicionado */
+}
+.relativ {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*top: 20px; /* Desplaza el elemento 20 píxeles hacia abajo desde su posición normal */
+  /*left: 100px; /* Desplaza el elemento 10 píxeles hacia la derecha desde su posición normal */
 }
