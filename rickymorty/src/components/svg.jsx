@@ -1,8 +1,8 @@
 export function Svg() {
   return (
     <svg
-      width="378"
-      height="376"
+      width="200"
+      height="200"
       viewBox="0 0 378 376"
       fill="none"
       className="header-background"

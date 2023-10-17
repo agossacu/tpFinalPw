@@ -108,16 +108,40 @@ h4 {
   background-color: orange;
   color: #ffffff;
 }
-.absol {
+.absol1 {
   position: absolute;
-  top: 50px; /* Posición a 50 píxeles desde la parte superior del ancestro posicionado */
-  left: 10px; /* Posición a 20 píxeles desde la izquierda del ancestro posicionado */
+  top: 68px; /* Posiciona el elemento a la mitad de la altura del padre */
+  right: 500px; /* Posición a 20 píxeles desde la izquierda del ancestro posicionado */
+  width: 25%;
+  bottom: 100px;
+  height: auto;
+  z-index: 1;
 }
-.relativ {
+.absol2 {
+  position: absolute;
+  top: -10px; /* Posiciona el elemento a la mitad de la altura del padre */
+  left: 100px; /* Posición a 20 píxeles desde la izquierda del ancestro posicionado */
+  z-index: 2;
+}
+.relative {
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 1400px; /* Ancho del contenedor */
+  height: 250px;
+
   /*top: 20px; /* Desplaza el elemento 20 píxeles hacia abajo desde su posición normal */
   /*left: 100px; /* Desplaza el elemento 10 píxeles hacia la derecha desde su posición normal */
+}
+.vivo {
+  color: rgb(85, 204, 68);
+}
+.muerto {
+  color: rgb(214, 61, 46);
+}
+.depa {
+  color: yellow;
+}
+.alinearpunto {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
