@@ -11,12 +11,19 @@ export function useCharacter() {
   const getAllEpisodes = (episodes) => {
     return fetch(`https://rickandmortyapi.com/api/episode/${episodes}`)
       .then((res) => res.json())
-      .then((data) => console.log(data.results.name));
+      .then((data) => console.log(data));
+  };
+  const getEpisodesName = (episodes) => {
+    return fetch(`https://rickandmortyapi.com/api/episode/${episodes}`)
+      .then((res) => res.json())
+      .then((data) => setEpisodes(data));
   };
 
   return {
     characters,
     getAllCharacters,
     getAllEpisodes,
+    getEpisodesName,
+    episodes,
   };
 }
