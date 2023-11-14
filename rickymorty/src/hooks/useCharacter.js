@@ -8,11 +8,7 @@ export function useCharacter() {
       .then((res) => res.json())
       .then((data) => setCharacters(data.results));
   };
-  const getAllEpisodes = (episodes) => {
-    return fetch(`https://rickandmortyapi.com/api/episode/${episodes}`)
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  };
+
   const getEpisodesName = (episodes) => {
     return fetch(`https://rickandmortyapi.com/api/episode/${episodes}`)
       .then((res) => res.json())
@@ -22,7 +18,6 @@ export function useCharacter() {
   return {
     characters,
     getAllCharacters,
-    getAllEpisodes,
     getEpisodesName,
     episodes,
   };

@@ -5,7 +5,7 @@ export function SingleCharacter(props) {
   const { personaje } = props;
   const { image, name, status, species, location, episode, id } = personaje;
 
-  const { getAllEpisodes, getEpisodesName, episodes } = useCharacter(); //desestructuracion del hook
+  const { getEpisodesName, episodes } = useCharacter(); //desestructuracion del hook
 
   const getStatusColor = (status) => {
     if (status === "Alive") {
@@ -18,14 +18,18 @@ export function SingleCharacter(props) {
     }
   };
   let epiNum = [];
-  let epiName = [];
   const handleClick = () => {
     episode.map((episodio) => epiNum.push(episodio.slice(40)));
-    getAllEpisodes(epiNum);
-    getEpisodesName(epiName);
+    getEpisodesName(epiNum);
   };
   useEffect(() => {
-    
+    if (episodes.length > 0 && episodes.length > 1) {
+      episodes.map((item) => {
+        console.log(item.name);
+      });
+    } else {
+      console.log(episodes.name);
+    }
   }, [episodes]);
   return (
     <li className="fondoCharacter colorGris" key={id}>
